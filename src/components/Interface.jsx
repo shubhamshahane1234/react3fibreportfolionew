@@ -39,8 +39,9 @@ const Aboutsection = () => {
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
+        className="text-gray-700 font-serif"
       >
-        I am FrontEnd Developer (ReactJS)
+        FrontEnd Developer (ReactJS)
       </motion.p>
     </Section>
   );
@@ -92,8 +93,8 @@ const Projectsection = () => {
 
 const Contactsection = () => {
   return (
-    <Section>
-      <div class="w-full max-w-[300px] bg-white rounded-lg shadow-md p-6">
+    <div className="w-[80%] flex items-center ">
+      <div class="w-full max-w-[500px] bg-white rounded-lg shadow-md p-6">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Form</h2>
 
         <form class="flex flex-col">
@@ -126,7 +127,7 @@ const Contactsection = () => {
           </button>
         </form>
       </div>
-    </Section>
+    </div>
   );
 };
 

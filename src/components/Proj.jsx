@@ -1,6 +1,6 @@
 import React from "react";
-// import Github from "../icons/Github";
-// import CheckWebsite from "../icons/CheckWebsite";
+import Github from "../icons/Github";
+import CheckWebsite from "../icons/CheckWebsite";
 // import { Element } from "react-scroll";
 
 const Proj = () => {
@@ -93,11 +93,11 @@ const Proj = () => {
                       <div class="p-6  ">
                         <div class="flex justify-around items-center">
                           <a href={project.websiteLink} alt="link">
-                            {/* <CheckWebsite webName={project.title} /> */}
+                            <CheckWebsite webName={project.title} />
                           </a>
                           <a href={project.codeLink} alt="link">
                             {" "}
-                            {/* <Github /> */}
+                            <Github />
                           </a>
                         </div>
                       </div>
