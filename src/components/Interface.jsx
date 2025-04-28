@@ -73,7 +73,8 @@ const Skillsection = () => {
               className="flex items-center justify-center p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition"
             >
               <span className="text-lg font-semibold text-gray-700">
-                {skill.language} {"   "} <span>{skill.icon}</span>
+                {skill.language} {"   "}
+                {/* <span>{skill.icon}</span> */}
               </span>
             </div>
           ))}
