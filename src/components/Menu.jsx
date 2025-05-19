@@ -15,7 +15,7 @@ const Menu = () => {
 
       <div
         className={` h-screen fixed top-0 right-0  overflow-hidden bg-white transition-all duration-300 ${
-          switchmenu ? "w-90" : "w-0"
+          switchmenu ? "w-[20vw]" : "w-0"
         } `}
       >
         {switchmenu && (

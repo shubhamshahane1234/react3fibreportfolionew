@@ -5,12 +5,25 @@ import Proj from "./Proj";
 
 const Section = (props) => {
   const { children } = props;
+
   return (
     <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.5 }}
-      className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center "
+      className={`
+  min-h-screen w-screen p-8 max-w-screen-2xl mx-auto
+  flex flex-col items-start justify-center 
+  `}
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 1,
+          delay: 0.6,
+        },
+      }}
     >
       {children}
     </motion.section>
@@ -31,7 +44,10 @@ const Interface = () => {
 const Aboutsection = () => {
   return (
     <Section>
-      <h1 className="text-6xl font-extrabold leading-snug">
+      <h1
+        className="text-6xl font-extrabold leading-snug"
+        style={{ fontSize: "clamp(20px,8vw,60px)" }}
+      >
         Hi, I'm <br />
         <span className="bg-white px-1 italic">Shubham Shahane</span>
       </h1>
@@ -86,49 +102,53 @@ const Skillsection = () => {
 
 const Projectsection = () => {
   return (
-    // <Section>
-    <Proj />
-    // </Section>
+    <Section>
+      <Proj />
+    </Section>
   );
 };
 
 const Contactsection = () => {
   return (
-    <div className="w-[80%] flex items-center ">
-      <div class="w-full max-w-[500px] bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Form</h2>
+    <Section>
+      <div className="w-[80%]  m-auto ">
+        <h2 className="text-3xl font-bold text-center mb-8">Contact</h2>
 
-        <form class="flex flex-col">
-          <input
-            type="text"
-            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-            placeholder="Full Name"
-          />
-          <input
-            type="email"
-            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-            placeholder="Email"
-          />
-          <input
-            type="number"
-            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-            placeholder="Phone Number"
-          />
-          <textarea
-            name="message"
-            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
-            placeholder="Message"
-          ></textarea>
+        <div class="w-full max-w-[500px] bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Form</h2>
 
-          <button
-            type="submit"
-            class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-          >
-            Submit
-          </button>
-        </form>
+          <form class="flex flex-col">
+            <input
+              type="text"
+              class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              placeholder="Full Name"
+            />
+            <input
+              type="email"
+              class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              placeholder="Email"
+            />
+            <input
+              type="number"
+              class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              placeholder="Phone Number"
+            />
+            <textarea
+              name="message"
+              class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+              placeholder="Message"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </Section>
   );
 };
 
